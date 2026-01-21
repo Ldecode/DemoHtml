@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cobranza</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .panel {
+            margin-top: 10px;
+        }
+
+        .total-pago {
+            font-size: 26px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .monto-input {
+            font-size: 18px;
+            text-align: right;
+        }
+
+        .metodo-btn {
+            margin-bottom: 10px;
+        }
+
+        .cambio {
+            font-size: 20px;
+            font-weight: bold;
+            color: #5cb85c;
+            text-align: center;
+        }
+
+        .btn-action {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+<div class="row">
+
+<!-- ================= RESUMEN ================= -->
+<div class="col-sm-5">
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h4>Resumen del Pedido</h4>
+            <p><strong>Pedido:</strong> #000123</p>
+            <p><strong>Tipo:</strong> Para llevar</p>
+            <p><strong>Cliente:</strong> Consumidor Final</p>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="total-pago">
+                Total: 62.00 Bs
+            </div>
+        </div>
+    </div>
+
+ <div class="panel panel-default">
+        <div class="panel-heading">
+            <strong>Detalle del Consumo</strong>
+        </div>
+
+        <div class="panel-body">
+
+            <table class="table table-condensed table-bordered">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th class="text-center">Cant.</th>
+                        <th class="text-right">P.Unit</th>
+                        <th class="text-right">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Café Americano</td>
+                        <td class="text-center">2</td>
+                        <td class="text-right">10.00</td>
+                        <td class="text-right">20.00</td>
+                    </tr>
+                    <tr>
+                        <td>Capuccino</td>
+                        <td class="text-center">1</td>
+                        <td class="text-right">12.00</td>
+                        <td class="text-right">12.00</td>
+                    </tr>
+                    <tr>
+                        <td>Pastel de Chocolate</td>
+                        <td class="text-center">2</td>
+                        <td class="text-right">15.00</td>
+                        <td class="text-right">30.00</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr>
+
+            <!-- NOTA DEL PEDIDO -->
+            <p><strong>Nota:</strong></p>
+            <p class="text-muted">
+                Café sin azúcar, uno frío.
+            </p>
+
+            <hr>
+
+            <!-- TOTALES -->
+            <div class="text-right">
+                <p>Subtotal: 62.00</p>
+                <p>Descuento: 0.00</p>
+                <h4><strong>Total a Cobrar: 62.00 Bs</strong></h4>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- ================= METODOS DE PAGO ================= -->
+<div class="col-sm-7">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <strong>Método de Pago</strong>
+        </div>
+        <div class="panel-body">
+
+            <div class="row">
+                <div class="col-xs-4">
+                    <button class="btn btn-default btn-block metodo-btn">
+                        Efectivo
+                    </button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btn btn-default btn-block metodo-btn">
+                        Tarjeta
+                    </button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btn btn-default btn-block metodo-btn">
+                        QR
+                    </button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btn btn-default btn-block metodo-btn">
+                        Transferencia
+                    </button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btn btn-default btn-block metodo-btn">
+                        Mixto
+                    </button>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- DATOS ADICIONALES -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Nro. Recibo / Referencia</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Observación</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- FACTURACIÓN -->
+            <h4>Datos para Factura (Opcional)</h4>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>NIT / CI</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="form-group">
+                        <label>Razón Social</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- ACCIONES -->
+            <div class="row">
+                <div class="col-sm-4">
+                    <button class="btn btn-success btn-block btn-action">
+                        Confirmar Pago
+                    </button>
+                </div>
+                <div class="col-sm-4">
+                    <button class="btn btn-primary btn-block btn-action">
+                        Imprimir Recibo
+                    </button>
+                </div>
+                <div class="col-sm-4">
+                    <button class="btn btn-default btn-block btn-action">
+                        Volver
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>POS</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f4f4f4;
+        }
+
+        .panel {
+            margin-top: 8px;
+        }
+
+        .order-header {
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .order-header strong {
+            display: block;
+        }
+
+        .qty-input {
+            width: 42px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .btn-xs {
+            padding: 2px 6px;
+        }
+
+        .pos-action-btn {
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+
+        .order-total {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        textarea {
+            resize: none;
+            font-size: 12px;
+        }
+
+        .pedido-tipo label {
+            font-weight: normal;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+<div class="row">
+
+<!-- ================= DETALLE PEDIDO ================= -->
+<div class="col-sm-5">
+
+    <!-- DATOS PEDIDO -->
+    <div class="panel panel-default">
+        <div class="panel-body order-header">
+            <div class="row">
+                <div class="col-xs-4">
+                    <strong>Mozo</strong> Juan
+                </div>
+                <div class="col-xs-4">
+                    <strong>Pedido</strong> #000123
+                </div>
+                <div class="col-xs-4">
+                    <strong>Fecha</strong> 21/01/2026
+                </div>
+                <div class="col-xs-6">
+                    <strong>Cliente</strong> Consumidor Final
+                </div>
+                <div class="col-xs-6">
+                    <strong>Mesa</strong> Mesa 5
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DETALLE -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <strong>Detalle del Pedido</strong>
+        </div>
+        <div class="panel-body">
+
+            <table class="table table-condensed table-bordered">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th class="text-center">Cant.</th>
+                        <th class="text-right">P.Unit</th>
+                        <th class="text-right">Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Café</td>
+                        <td class="text-center">
+                            <button class="btn btn-xs btn-default">-</button>
+                            <input class="qty-input" value="1">
+                            <button class="btn btn-xs btn-default">+</button>
+                        </td>
+                        <td class="text-right">10.00</td>
+                        <td class="text-right">10.00</td>
+                        <td class="text-center">
+                            <button class="btn btn-xs btn-danger">✖</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="order-total text-right">
+                Total: 10.00
+            </div>
+
+        </div>
+    </div>
+
+    <!-- NOTA -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <strong>Nota del Pedido</strong>
+        </div>
+        <div class="panel-body">
+            <textarea class="form-control" rows="2"
+                placeholder="Ej: sin azúcar, frío, poco hielo..."></textarea>
+        </div>
+    </div>
+
+    <!-- ACCIONES -->
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-4"><button class="btn btn-success btn-block pos-action-btn">Abrir</button></div>
+                <div class="col-xs-4"><button class="btn btn-warning btn-block pos-action-btn">Cerrar</button></div>
+                <div class="col-xs-4"><button class="btn btn-danger btn-block pos-action-btn">Cobrar</button></div>
+
+                <div class="col-xs-4"><button class="btn btn-info btn-block pos-action-btn">Pedido</button></div>
+                <div class="col-xs-4"><button class="btn btn-primary btn-block pos-action-btn">Comanda</button></div>
+                <div class="col-xs-4"><button class="btn btn-default btn-block pos-action-btn">Imprimir</button></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ================= PRODUCTOS ================= -->
+<div class="col-sm-7">
+
+    <!-- CATEGORÍAS -->
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-3"><button class="btn btn-default btn-block btn-xs">Cafetería</button></div>
+                <div class="col-xs-3"><button class="btn btn-default btn-block btn-xs">Bebidas</button></div>
+                <div class="col-xs-3"><button class="btn btn-default btn-block btn-xs">Pastelería</button></div>
+                <div class="col-xs-3"><button class="btn btn-default btn-block btn-xs">Comidas</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCTOS -->
+    <div class="panel panel-default">
+        <div class="panel-heading"><strong>Productos</strong></div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-4"><button class="btn btn-default btn-block btn-xs">Café<br><strong>10.00</strong></button></div>
+                <div class="col-xs-4"><button class="btn btn-default btn-block btn-xs">Capuccino<br><strong>12.00</strong></button></div>
+                <div class="col-xs-4"><button class="btn btn-default btn-block btn-xs">Té<br><strong>8.00</strong></button></div>
+                <div class="col-xs-4"><button class="btn btn-default btn-block btn-xs">Pastel<br><strong>15.00</strong></button></div>
+                <div class="col-xs-4"><button class="btn btn-default btn-block btn-xs">Sandwich<br><strong>18.00</strong></button></div>
+                <div class="col-xs-4"><button class="btn btn-default btn-block btn-xs">Jugo<br><strong>12.00</strong></button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TIPO DE PEDIDO -->
+    <div class="panel panel-default">
+        <div class="panel-body pedido-tipo">
+            <label>
+                <input type="radio" name="tipoPedido"> Mesa
+            </label>
+            <label>
+                <input type="radio" name="tipoPedido"> Para llevar
+            </label>
+            <label>
+                <input type="radio" name="tipoPedido"> Delivery
+            </label>
+        </div>
+    </div>
+
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Cafetería</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <style>
+        body {
+            padding-top: 70px;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .iframe-container {
+            width: 100%;
+            height: calc(100vh - 70px);
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- MENU TOP -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+
+        <!-- BRAND -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Mi Cafetería</a>
+        </div>
+
+        <!-- MENU -->
+        <ul class="nav navbar-nav">
+
+            <!-- CONFIGURACION -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Configuración <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="config_usuario.html" target="contentFrame">Usuario</a></li>
+                    <li><a href="config_personal.html" target="contentFrame">Registro de Personal</a></li>
+                </ul>
+            </li>
+
+            <!-- INVENTARIO -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Inventario <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+					<li><a href="Productos.html" target="contentFrame">Productos</a></li>
+                    <li><a href="ingreso.html" target="contentFrame">Ingreso</a></li>
+                    <li><a href="inventario_egreso.html" target="contentFrame">Egreso</a></li>
+                </ul>
+            </li>
+
+            <!-- VENTA -->
+
+			<li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Venta (Pedido) <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+					<li><a href="ListaPedidos.html" target="contentFrame">Lista de Pedidos</a></li>
+					 <li><a href="POS.html" target="contentFrame">Venta</a></li>
+                    <li><a href="Cobrazanda-Pagos.html" target="contentFrame">Cobro con Pago</a></li>
+                    <li><a href="Cobranza.html" target="contentFrame">Cobro</a></li>
+                </ul>
+            </li>
+
+            <!-- TESORERIA -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tesorería <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="tesoreria_inicio_caja.html" target="contentFrame">Inicio de Caja</a></li>
+                    <li><a href="tesoreria_cierre_caja.html" target="contentFrame">Cierre de Caja</a></li>
+                    <li class="divider"></li>
+                    <li><a href="tesoreria_ingreso.html" target="contentFrame">Registro de Ingreso</a></li>
+                    <li><a href="tesoreria_egreso.html" target="contentFrame">Registro de Egreso</a></li>
+                </ul>
+            </li>
+
+            <!-- REPORTES -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Reportes <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="reporte_ventas.html" target="contentFrame">Reporte de Ventas</a></li>
+                    <li><a href="reporte_inventario.html" target="contentFrame">Reporte de Inventario</a></li>
+                    <li><a href="reporte_tesoreria.html" target="contentFrame">Reporte de Tesorería</a></li>
+                    <li><a href="reporte_productos.html" target="contentFrame">Reporte de Productos</a></li>
+                    <li><a href="reporte_pedidos.html" target="contentFrame">Reporte de Pedidos</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<!-- IFRAME -->
+<iframe name="contentFrame" class="iframe-container" src="dashboard.html"></iframe>
+
+<!-- BOOTSTRAP JS (necesario para dropdown) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

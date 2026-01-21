@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingreso de Inventario</title>
+
+    <!-- Bootstrap 3 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .panel {
+            margin-top: 30px;
+        }
+
+        .form-section-title {
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">Ingreso de Inventario</h4>
+        </div>
+
+        <div class="panel-body">
+
+            <!-- Datos generales -->
+            <div class="form-section-title">Datos Generales</div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Motivo</label>
+                        <select class="form-control">
+                            <option>Compra</option>
+                            <option>Ajuste</option>
+                            <option>Devolución</option>
+                            <option>Ingreso manual</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Fecha</label>
+                        <input type="date" class="form-control">
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Almacén</label>
+                        <select class="form-control">
+                            <option>Almacén Central</option>
+                            <option>Sucursal 1</option>
+                            <option>Sucursal 2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Detalle de productos -->
+            <div class="form-section-title">Detalle de Productos</div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="form-group">
+                        <label>Producto</label>
+                        <input type="text" class="form-control" placeholder="Buscar o ingresar producto">
+                    </div>
+                </div>
+
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label>Cantidad</label>
+                        <input type="number" class="form-control" placeholder="0">
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Costo Unitario</label>
+                        <input type="number" class="form-control" placeholder="0.00">
+                    </div>
+                </div>
+
+                <div class="col-sm-2">
+                    <label>&nbsp;</label>
+                    <button type="button" class="btn btn-success btn-block">
+                        Adicionar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tabla detalle (maqueta) -->
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th class="text-center">Cantidad</th>
+                            <th class="text-right">Costo Unit.</th>
+                            <th class="text-right">Total</th>
+                            <th class="text-center">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Producto de ejemplo</td>
+                            <td class="text-center">10</td>
+                            <td class="text-right">50.00</td>
+                            <td class="text-right">500.00</td>
+                            <td class="text-center">
+                                <button class="btn btn-xs btn-danger">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <hr>
+
+            <!-- Acciones -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <strong>Total General:</strong> 500.00
+                </div>
+                <div class="col-sm-6 text-right">
+                    <button type="button" class="btn btn-default">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        Guardar Ingreso
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
