@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mega Menu Bootstrap 3</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <style>
+    /* Estilos para el Mega Menu */
+    
+    /* 1. Forzar que el dropdown sea relativo a la navbar completa */
+    .navbar .mega-dropdown {
+      position: static !important;
+    }
+
+    /* 2. Ancho completo y diseño del contenedor */
+    .navbar .mega-dropdown-menu {
+      width: 100%;
+      padding: 30px 30px;
+      border-top: 1px solid #e7e7e7;
+      background-color: #fff;
+      box-shadow: 0 8px 16px rgba(0,0,0,.1);
+    }
+
+    /* 3. Estilo de los encabezados dentro del mega menu */
+    .mega-dropdown-menu .dropdown-header {
+      padding: 0 0 10px 0;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 16px;
+      font-weight: bold;
+      color: #337ab7;
+      text-transform: uppercase;
+    }
+
+    /* 4. Estilo de los enlaces internos */
+    .mega-dropdown-menu ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    .mega-dropdown-menu ul li a {
+      display: block;
+      padding: 5px 0;
+      color: #666;
+      text-decoration: none;
+    }
+
+    .mega-dropdown-menu ul li a:hover {
+      color: #337ab7;
+      padding-left: 5px;
+      transition: all 0.3s ease;
+    }
+
+    /* Ajuste para que el menú no se cierre bruscamente al mover el mouse (opcional) */
+    @media (min-width: 768px) {
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">MiTienda</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="main-navbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Inicio</a></li>
+          
+          <li class="dropdown mega-dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              Categorías <span class="caret"></span>
+            </a>
+            
+            <div class="dropdown-menu mega-dropdown-menu">
+              <div class="container-fluid">
+                <div class="row">
+                  
+                  <div class="col-sm-4">
+                    <ul>
+                      <li class="dropdown-header">Tecnología</li>
+                      <li><a href="#">Computadoras de Escritorio</a></li>
+                      <li><a href="#">Laptops Gamer</a></li>
+                      <li><a href="#">Monitores 4K</a></li>
+                      <li><a href="#">Accesorios y Teclados</a></li>
+                    </ul>
+                  </div>
+                  
+                  <div class="col-sm-4">
+                    <ul>
+                      <li class="dropdown-header">Audio & Video</li>
+                      <li><a href="#">Smart TVs</a></li>
+                      <li><a href="#">Barras de Sonido</a></li>
+                      <li><a href="#">Auriculares Bluetooth</a></li>
+                      <li><a href="#">Cámaras Profesionales</a></li>
+                    </ul>
+                  </div>
+                  
+                  <div class="col-sm-4">
+                    <ul>
+                      <li class="dropdown-header">Ofertas Especiales</li>
+                      <li><a href="#">Liquidación de Invierno</a></li>
+                      <li><a href="#">Cupones de Descuento</a></li>
+                      <li><a href="#">Envío Gratis hoy</a></li>
+                      <li><a href="#">Nuevos Arribos</a></li>
+                    </ul>
+                  </div>
+
+                </div> </div> </div> </li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div></div></nav>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Mega Menú de 3 Columnas</h1>
+      <p>Este es un ejemplo de cómo implementar un menú de ancho completo usando el sistema de rejilla de Bootstrap 3.</p>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>

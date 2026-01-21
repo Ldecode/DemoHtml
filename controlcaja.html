@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apertura / Cierre de Caja</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .page-header {
+            margin-top: 20px;
+        }
+
+        .panel {
+            margin-top: 15px;
+        }
+
+        .info-box {
+            background: #fff;
+            padding: 15px;
+            border-radius: 4px;
+            border-left: 4px solid #337ab7;
+            margin-bottom: 15px;
+        }
+
+        .info-box.success {
+            border-left-color: #5cb85c;
+        }
+
+        .info-box.warning {
+            border-left-color: #f0ad4e;
+        }
+
+        .info-box h4 {
+            margin-top: 0;
+        }
+
+        .summary-value {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+
+    <!-- TÍTULO -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="page-header">
+                <h3>Apertura y Cierre de Caja</h3>
+                <p class="text-muted">Control diario de caja – Cafetería</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- INFORMACIÓN ACTUAL -->
+    <div class="row">
+
+        <div class="col-sm-4">
+            <div class="info-box">
+                <h4>Estado de Caja</h4>
+                <p class="summary-value text-warning">Caja Cerrada</p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="info-box">
+                <h4>Cajero</h4>
+                <p class="summary-value">Juan Pérez</p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="info-box">
+                <h4>Fecha</h4>
+                <p class="summary-value">21/01/2026</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- APERTURA DE CAJA -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <strong>Apertura de Caja</strong>
+                </div>
+
+                <div class="panel-body">
+                    <form>
+
+                        <div class="row">
+
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label>Monto Inicial (Efectivo)</label>
+                                    <input type="number" class="form-control" placeholder="0.00">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label>Hora de Apertura</label>
+                                    <input type="time" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label>Caja / Terminal</label>
+                                    <select class="form-control">
+                                        <option>Caja 1</option>
+                                        <option>Caja 2</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label>Turno</label>
+                                    <select class="form-control">
+                                        <option>Mañana</option>
+                                        <option>Tarde</option>
+                                        <option>Noche</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label>Observaciones</label>
+                            <textarea class="form-control" rows="2" placeholder="Notas de apertura"></textarea>
+                        </div>
+
+                        <button class="btn btn-success">
+                            <span class="glyphicon glyphicon-lock"></span> Abrir Caja
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CIERRE DE CAJA -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <strong>Cierre de Caja</strong>
+                </div>
+
+                <div class="panel-body">
+                    <form>
+
+                        <!-- RESUMEN -->
+                        <div class="row">
+
+                            <div class="col-sm-3">
+                                <div class="info-box success">
+                                    <h4>Total Ventas</h4>
+                                    <p class="summary-value">1,250 Bs</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="info-box success">
+                                    <h4>Efectivo</h4>
+                                    <p class="summary-value">750 Bs</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="info-box success">
+                                    <h4>Tarjeta</h4>
+                                    <p class="summary-value">500 Bs</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="info-box warning">
+                                    <h4>Diferencia</h4>
+                                    <p class="summary-value">0 Bs</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- CIERRE -->
+                        <div class="row">
+
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label>Efectivo Contado</label>
+                                    <input type="number" class="form-control" placeholder="0.00">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label>Hora de Cierre</label>
+                                    <input type="time" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Observaciones de Cierre</label>
+                                    <textarea class="form-control" rows="2"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button class="btn btn-danger">
+                            <span class="glyphicon glyphicon-off"></span> Cerrar Caja
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- JS Bootstrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
