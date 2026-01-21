@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Personal</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .page-header {
+            margin-top: 20px;
+        }
+
+        .panel {
+            margin-top: 15px;
+        }
+
+        .btn-action {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+
+    <!-- TÍTULO -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="page-header">
+                <h3>Registro de Personal</h3>
+                <p class="text-muted">Administración de empleados de la cafetería</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTÓN NUEVO -->
+    <div class="row">
+        <div class="col-sm-12 text-right">
+            <button class="btn btn-success" data-toggle="modal" data-target="#modalPersonal">
+                <span class="glyphicon glyphicon-plus"></span> Agregar Personal
+            </button>
+        </div>
+    </div>
+
+    <!-- LISTADO -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>Personal Registrado</strong>
+                </div>
+
+                <div class="panel-body table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Nombre Completo</th>
+                                <th>Cargo</th>
+                                <th>Turno</th>
+                                <th>Celular</th>
+                                <th>Estado</th>
+                                <th width="120">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>EMP-001</td>
+                                <td>Ana Rodríguez</td>
+                                <td>Mozo</td>
+                                <td>Mañana</td>
+                                <td>71234567</td>
+                                <td><span class="label label-success">Activo</span></td>
+                                <td>
+                                    <button class="btn btn-xs btn-warning btn-action" data-toggle="modal" data-target="#modalPersonal">
+                                        Editar
+                                    </button>
+                                    <button class="btn btn-xs btn-danger">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>EMP-002</td>
+                                <td>Carlos Méndez</td>
+                                <td>Cocinero</td>
+                                <td>Tarde</td>
+                                <td>70123456</td>
+                                <td><span class="label label-default">Inactivo</span></td>
+                                <td>
+                                    <button class="btn btn-xs btn-warning btn-action" data-toggle="modal" data-target="#modalPersonal">
+                                        Editar
+                                    </button>
+                                    <button class="btn btn-xs btn-danger">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- MODAL PERSONAL -->
+<div class="modal fade" id="modalPersonal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Registro de Personal</h4>
+            </div>
+
+            <div class="modal-body">
+                <form>
+
+                    <div class="row">
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Código</label>
+                                <input type="text" class="form-control" placeholder="EMP-001">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-8">
+                            <div class="form-group">
+                                <label>Nombre Completo</label>
+                                <input type="text" class="form-control" placeholder="Nombre y Apellido">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Cargo</label>
+                                <select class="form-control">
+                                    <option>Mozo</option>
+                                    <option>Cocinero</option>
+                                    <option>Cajero</option>
+                                    <option>Administrador</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Turno</label>
+                                <select class="form-control">
+                                    <option>Mañana</option>
+                                    <option>Tarde</option>
+                                    <option>Noche</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Celular</label>
+                                <input type="text" class="form-control" placeholder="Ej: 71234567">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Documento (CI)</label>
+                                <input type="text" class="form-control" placeholder="Número de CI">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Fecha de Ingreso</label>
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Estado</label>
+                                <select class="form-control">
+                                    <option>Activo</option>
+                                    <option>Inactivo</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>Observaciones</label>
+                        <textarea class="form-control" rows="3" placeholder="Notas adicionales"></textarea>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button class="btn btn-success">Guardar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- JS Bootstrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
