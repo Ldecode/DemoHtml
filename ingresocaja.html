@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de Caja</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .panel {
+            margin-top: 30px;
+        }
+
+        .form-section-title {
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h4 class="panel-title">Ingreso de Caja (Efectivo)</h4>
+        </div>
+
+        <div class="panel-body">
+
+            <!-- Datos generales -->
+            <div class="form-section-title">Datos Generales</div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Motivo</label>
+                        <select class="form-control">
+                            <option>Venta</option>
+                            <option>Ingreso manual</option>
+                            <option>Pago de cliente</option>
+                            <option>Otros ingresos</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Fecha</label>
+                        <input type="date" class="form-control">
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Caja</label>
+                        <select class="form-control">
+                            <option>Caja Principal</option>
+                            <option>Caja Turno Mañana</option>
+                            <option>Caja Turno Tarde</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Detalle del ingreso -->
+            <div class="form-section-title">Detalle del Ingreso</div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="form-group">
+                        <label>Concepto</label>
+                        <input type="text" class="form-control" placeholder="Descripción del ingreso">
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Monto</label>
+                        <input type="number" class="form-control" placeholder="0.00">
+                    </div>
+                </div>
+
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label>Moneda</label>
+                        <select class="form-control">
+                            <option>BOB</option>
+                            <option>USD</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-sm-2">
+                    <label>&nbsp;</label>
+                    <button type="button" class="btn btn-success btn-block">
+                        Adicionar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tabla detalle -->
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Concepto</th>
+                            <th class="text-center">Caja</th>
+                            <th class="text-right">Monto</th>
+                            <th class="text-center">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Venta mostrador</td>
+                            <td class="text-center">Caja Principal</td>
+                            <td class="text-right">150.00</td>
+                            <td class="text-center">
+                                <button class="btn btn-xs btn-danger">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <hr>
+
+            <!-- Observaciones -->
+            <div class="form-group">
+                <label>Observaciones</label>
+                <textarea class="form-control" rows="2"
+                          placeholder="Observaciones adicionales del ingreso"></textarea>
+            </div>
+
+            <!-- Acciones -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <strong>Total Ingresado:</strong> 150.00
+                </div>
+                <div class="col-sm-6 text-right">
+                    <button type="button" class="btn btn-default">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="btn btn-success">
+                        Guardar Ingreso
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
